@@ -17,30 +17,31 @@ const Home = () => (
     </Head>
 
     <div className='page oceaned'>
-			<div className='head'>
-				<h1>Loïc Coenen</h1>
-				<h2>Full stack developer</h2>
-				<button>My blog</button>
-				<button><img alt="Contact me" src="assets/contact.png" /></button>
-				<button><img alt="Github" src="assets/github.png" /></button>
+			<div className="head">
+				<h1 className="left-column">Loïc Coenen</h1>
+				<h2 className="right-column">Full stack developer</h2>
+				<div className='button-bar'>
+					<button>My blog</button>
+					<button><img alt="Contact me" src="assets/contact.png" /></button>
+					<button><img alt="Github" src="assets/github.png" /></button>
+				</div>
+			</div>	
+			<div className="left-column">
+				My skills
 			</div>
-			<div className="content">
-				<div className="left-column">
-					My skills
-				</div>
-				<div className="right-column">
-					<ul>
-						<li><strong>Javascript</strong> Typescript, Coffeescript, Assemblyscript and other scripts</li>
-						<li><strong>Frameworks</strong> React, Angular 2+</li>
-						<li><strong>HTML5</strong> CSS3, SCSS/SASS</li>
-						<li><strong>UX</strong> Design, evaluation, research</li>
-						<li><strong>Blockchain</strong> Web3, Solidity, Web assembly</li>
-						<li><strong>Unix</strong> administration, Docker, vim, tmux, git, ...</li>
-						<li><strong>Programming</strong> C, C++, Python, PHP, R, ...</li>
-						<li><strong>Psychology</strong> Usability, social cognition, statistics, ergonomics</li>
-						<li><strong>Database</strong> SQL, NoSQL</li>
-					</ul>
-				</div>
+			<div className="right-column">
+				<ul>
+					<li><strong>Javascript</strong> Typescript, Coffeescript, Assemblyscript and other scripts</li>
+					<li><strong>Frameworks</strong> React, Angular 2+</li>
+					<li><strong>HTML5</strong> CSS3, SCSS/SASS</li>
+					<li><strong>UX</strong> Design, evaluation, research</li>
+					<li><strong>Blockchain</strong> Web3, Solidity, Web assembly</li>
+					<li><strong>Unix</strong> administration, Docker, vim, tmux, git, ...</li>
+					<li><strong>Programming</strong> C, C++, Python, PHP, R, ...</li>
+					<li><strong>Psychology</strong> Usability, social cognition, statistics, ergonomics</li>
+					<li><strong>Database</strong> SQL, NoSQL</li>
+					<li><em>... and more to come</em></li>
+				</ul>
 			</div>
     </div>
 
@@ -100,15 +101,13 @@ const Home = () => (
 				width: 100%;
 				height: ${PAGE_HEIGHT}px;
 				display: flex;
-				flex-direction: column;
+				flex-direction: row;
 				align-items: start;
 				flex-wrap: wrap;
 			}
 
-			.content {
-				flex-direction: row;
-				align-items: start;
-				flex-wrap: wrap;
+			.button-bar {
+				background-color: orange;
 			}
 
 			.head {
@@ -122,37 +121,47 @@ const Home = () => (
 
 			h1 {
 				margin-top: ${4*GU}px;
-				margin-left: ${4*GU}px;
-				font-size: 64px;
 				letter-spacing: -0.1em;
 				font-weight: lighter;
-				width: 30%;
-				text-align: end;
-				margin-right: ${4*GU}px;
+			}
+
+			h1.left-column {
+				font-size: 64px;
 			}
 
 			h2 {
+
 				border-left: 1px solid ${mainColor};
 				padding-left: ${4*GU}px;
 				font-size: 36px;
 				letter-spacing: -0.05em;
 				width: 50%;
+
 			}
 
 			.left-column {
-				top: 20%;
+				text-align: end;
+				margin-right: ${4*GU}px;
 				font-weight: 300;
 				font-size: 32px;
 				width: 30%;
+				// heigth: 60%;
 			}
 
 			.right-column {
 				border-left: 1px solid ${mainColor};
 				padding-left: ${4*GU}px;
-				top: 20%;
 				font-weight: normal;
 				font-size: 24px;
 				width: 50%;
+			}
+
+			.right-column ul, .right-column p {
+				margin-top: 0;
+			}
+
+			.right-column strong {
+				font-size: 28px;
 			}
 
 		`}</style>
