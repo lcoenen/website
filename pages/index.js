@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Nav from '../components/nav'
 
-const PAGE_HEIGHT = 1080;
+const PAGE_HEIGHT = 800;
 const GU = 8;
 const mainColor = '#CDBAB0';
 
@@ -31,21 +31,21 @@ const Home = () => (
 			</div>
 			<div className="right-column">
 				<ul>
-					<li><strong>Javascript</strong> Typescript, Coffeescript, Assemblyscript and other scripts</li>
-					<li><strong>Frameworks</strong> React, Angular 2+</li>
-					<li><strong>HTML5</strong> CSS3, SCSS/SASS</li>
-					<li><strong>UX</strong> Design, evaluation, research</li>
-					<li><strong>Blockchain</strong> Web3, Solidity, Web assembly</li>
-					<li><strong>Unix</strong> administration, Docker, vim, tmux, git, ...</li>
-					<li><strong>Programming</strong> C, C++, Python, PHP, R, ...</li>
-					<li><strong>Psychology</strong> Usability, social cognition, statistics, ergonomics</li>
-					<li><strong>Database</strong> SQL, NoSQL</li>
+					<li><strong>Javascript</strong>: Typescript, Coffeescript, Assemblyscript and other scripts</li>
+					<li><strong>Frameworks</strong> :React, Angular 2+</li>
+					<li><strong>HTML5</strong>: CSS3, SCSS/SASS</li>
+					<li><strong>UX</strong>: Design, evaluation, research</li>
+					<li><strong>Blockchain</strong>: Web3, Solidity, Web assembly</li>
+					<li><strong>Unix</strong> administration: Docker, vim, tmux, git, ...</li>
+					<li><strong>Programming</strong>: C, C++, Python, PHP, R, ...</li>
+					<li><strong>Psychology</strong>: Usability, social cognition, statistics, ergonomics</li>
+					<li><strong>Database</strong>: SQL, NoSQL</li>
 					<li><em>... and more to come</em></li>
 				</ul>
 			</div>
     </div>
 
-		<div className='page '>
+		<div className='page vertically-centered'>
 			<div className='left-column'>My stories</div>
 			<div className='right-column'> 
 				<p>I was 14 years old. The (56k) internet	went down. I got bored, and
@@ -62,27 +62,28 @@ const Home = () => (
 			</div>
 		</div>
 
-		<div className='page starskied timeline'>
-			<div className='left-column'>My timeline</div>
+		<div className='page starskied timeline vertically-centered'>
+			<div className='left-column'>
+				<div>My timeline</div>
 
-			<div className='timeline-element'>
 				<div className='date'>1990</div>
-				<div className='content'><strong>Birth</strong>, in Liege, Belgium.</div>`
-			</div>
-
-			<div className='timeline-element'>
 				<div className='date'>2004-2007</div>
-				<div className='content'><strong>Self-teaching</strong>, C, C++, PHP / HTML, Javascript</div>`
-			</div>
-
-			<div className='timeline-element'>
 				<div className='date'>2009-2009</div>
+			</div>
+			<div className='right-column'>
+				<div className='content'><strong>Birth</strong>, in Liege, Belgium.</div>`
+				<div className='content'><strong>Self-teaching</strong>, C, C++, PHP / HTML, Javascript</div>`
 				<div className='content'><strong>Self-teaching</strong>, C, C++, PHP / HTML, Javascript</div>`
 			</div>
 		</div>
 
 
     <style jsx global>{`
+
+			.page.vertically-centered {
+				padding-top: 256px;
+				margin-bottom: 0px;
+			}
 
 			body {
 				background-color: black;
@@ -151,7 +152,10 @@ const Home = () => (
 				font-weight: 300;
 				font-size: 32px;
 				width: 30%;
-				// heigth: 60%;
+			}
+
+			.timeline .right-ccolumn {
+				padding-top: 40px;	
 			}
 
 			.right-column {
