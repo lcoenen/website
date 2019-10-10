@@ -45,7 +45,7 @@ const Home = () => (
 			</div>
     </div>
 
-		<div className='page'>
+		<div className='page '>
 			<div className='left-column'>My stories</div>
 			<div className='right-column'> 
 				<p>I was 14 years old. The (56k) internet	went down. I got bored, and
@@ -62,7 +62,7 @@ const Home = () => (
 			</div>
 		</div>
 
-		<div className='page timeline'>
+		<div className='page starskied timeline'>
 			<div className='left-column'>My timeline</div>
 
 			<div className='timeline-element'>
@@ -96,6 +96,11 @@ const Home = () => (
 				background-repeat: no-repeat;
 			}
 
+			.starskied {
+				background-image: url('static/starsky.png');
+				background-repeat: no-repeat;
+			}
+
 			.page {
 				margin: 0;
 				width: 100%;
@@ -103,6 +108,7 @@ const Home = () => (
 				display: flex;
 				flex-direction: row;
 				align-items: start;
+				flex-grow: 1;
 				flex-wrap: wrap;
 			}
 
