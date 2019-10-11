@@ -79,7 +79,7 @@ const Home = () => (
     </div>
 
     <div className="page vertically-centered">
-      <div className="left-column">My stories</div>
+      <div className="left-column">My story</div>
       <div className="right-column">
         <p>
           I was 14 years old. The (56k) internet went down. I got bored, and
@@ -208,7 +208,9 @@ const Home = () => (
       }
 
 			.head .right-column {
-				width: 40%;
+				width: 30%;
+				text-align: center;
+				margin-bottom: 2em;
 			}
 
       h1 {
@@ -294,14 +296,74 @@ const Home = () => (
 				border-radius: 16px;
 			}
 
-			.button-bar a  {
-			}
-
 			.button-bar a img {
 				position: relative;
 				top: 4px;
 				width: 24px;
 				height: 24px;
+			}
+
+			@media only screen and (max-width: 799px) {
+				h1 { 
+				}
+
+				h2 { 
+					width: 100% !important;
+				}
+
+				.page {
+					height: 100% !important;
+        	flex-direction: column;
+					align-Vitems: center;
+				}
+
+				.head {
+					flex-direction: column;
+					align-items: center;
+					margin-bottom: 2em;
+				}	
+
+				.left-column {
+					text-align: center !important;
+					width: 100% !important;
+					margin-bottom: 1em;
+				}
+
+				.right-column { 
+					width: 100%;
+					border: 0;
+					padding-right: ${4 * GU}px;
+					width: 80%;
+				}
+
+				.date {
+					font-size: 12px;
+				}
+
+				.dot { 
+					display: none;
+				}
+
+				.page.timeline .right-column {
+					font-size: 12px;
+					width: 60%;
+					padding: 0;
+				}
+			
+				.page.timeline .left-column {
+					width: 40% !important;
+					margin-right: 0;
+				}
+
+				.page.timeline {
+					flex-direction: row;
+					align-elements: top;
+				}
+
+				.content strong {
+					font-size: 12px !important;	
+				}
+
 			}
 
     `}</style>
