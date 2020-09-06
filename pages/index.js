@@ -211,8 +211,8 @@ const Home = () => (
 				width: 30%;
 				text-align: center;
 				margin-bottom: 2em;
-        align-self: end;
-        padding-top: 8px;
+        align-self: flex-end;
+        padding-top: 16px;
         padding-bottom: 8px;
 			}
 
@@ -277,6 +277,12 @@ const Home = () => (
 				height: 16px;
 				border-radius: 50%;
 			}
+
+      .button-bar {
+        position: fixed;
+        margin-top: 16px;
+        margin-left: 85%;
+      }
 
 			.button-bar a {
 				font-family: Quicksand;
