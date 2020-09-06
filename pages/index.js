@@ -28,7 +28,7 @@ const Home = () => (
     <div className="page oceaned">
       <div className="head">
         <h1 className="left-column">Loïc Coenen</h1>
-        <h2 className="right-column">Full stack developer</h2>
+        <h2 className="right-column">Javascript engineer</h2>
         <div className="button-bar">
           <a href={MY_BLOG}>My blog</a>
           <a href={MY_MAIL}>
@@ -47,7 +47,7 @@ const Home = () => (
             Assemblyscript and other scripts
           </li>
           <li>
-            <strong>Frameworks</strong> :React, Angular 2+
+            <strong>Frameworks</strong>: React, Angular 2+
           </li>
           <li>
             <strong>HTML5</strong>: CSS3, SCSS/SASS
@@ -211,6 +211,9 @@ const Home = () => (
 				width: 30%;
 				text-align: center;
 				margin-bottom: 2em;
+        align-self: end;
+        padding-top: 8px;
+        padding-bottom: 8px;
 			}
 
       h1 {
